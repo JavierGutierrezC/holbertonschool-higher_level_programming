@@ -6,8 +6,5 @@ def new_in_list(my_list, idx, element):
     elif idx >= len(my_list):
         return(my_list)
     else:
-        for x in range(len(copylis)):
-            if x == idx:
-                copylis[x] = element
-                return(copylis)
+        copylis[idx] = element
         return(my_list)
