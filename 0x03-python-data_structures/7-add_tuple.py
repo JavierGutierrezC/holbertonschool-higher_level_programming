@@ -2,7 +2,7 @@
 def add_tuple(tuple_a=(), tuple_b=()):
     list1 = list(tuple_a)
     list2 = list(tuple_b)
-    for x in range(0,2):
+    for x in range(0, 2):
         if len(list1) < 2:
             list1.append(0)
         if len(list2) < 2:
