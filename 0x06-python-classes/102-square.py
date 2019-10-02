@@ -24,20 +24,20 @@ class Square:
     def area(self):
         return(self.__size * self.__size)
 
-    def __ld__(self, other):
+    def __lt__(self, other):
         return(self.area() < other.area())
 
-    def __led__(self, other):
+    def __le__(self, other):
         return(self.area() <= other.area())
 
-    def __et__(self, other):
+    def __eq__(self, other):
         return(self.area() == other.area())
 
-    def __dif__(self, other):
+    def __ne__(self, other):
         return(self.area() != other.area())
 
-    def __gd__(self, other):
+    def __gt__(self, other):
         return(self.area() > other.area())
 
-    def __ged__(self, other):
+    def __ge__(self, other):
         return(self.area() >= other.area())
