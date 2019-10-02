@@ -3,9 +3,10 @@
 """Write a class Square that defines a square
 uing a getter and a setter"""
 
+
 class Square:
 
-    def __init__(self, size = 0):
+    def __init__(self, size=0):
         self.__size = size
 
     @property
@@ -22,3 +23,9 @@ class Square:
 
     def area(self):
         return(self.__size * self.__size)
+
+    def my_print(self):
+        if (self.__size == 0):
+            print("")
+        for x in range(0, int(self.__size)):
+            print("#" * int(self.__size))
