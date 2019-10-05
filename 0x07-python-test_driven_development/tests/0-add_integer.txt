@@ -58,3 +58,11 @@
     >>> add_integer(23, [])
     Traceback (most recent call last):
     TypeError: b must be an integer
+
+    >>> add_integer(float(2**1050), float(2**1050))
+    Traceback (most recent call last):
+    OverflowError: int too large to convert to float
+
+    >>> add_integer(float("nan"))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
