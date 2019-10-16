@@ -1,1 +1,12 @@
 # 7-base_geometry.txt
+
+
+	>>>BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+	>>>bg.integer_validator("animal", "cat")
+	Traceback (most recent call last):
+	TypeError: name must be an integer
+
+	>>>bg.integer_validator("number", "0")
+        Traceback (most recent call last):
+        ValueError: number must be greater than 0
