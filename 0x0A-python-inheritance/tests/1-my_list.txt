@@ -9,13 +9,13 @@
 	>>> listjg.print_sorted()
 	[None]
 
-	>>> listjg2 = MyList(0)
+	>>> listjg2 = MyList()
         >>> listjg2.append(0)
         >>> listjg2.print_sorted()
         [0]
 
-	>>> listjg3 = MyList(5)
-        >>> listjg3.append(None)
+	>>> listjg3 = MyList()
+        >>> listjg3.append(5)
         >>> print(listjg3)
         [5]
         >>> listjg3.print_sorted()
@@ -30,12 +30,12 @@
         >>> listjg4.print_sorted()
         [1, 3, 7]
 
-	>>> listjg4 = MyList()
+	>>> listjg5 = MyList()
         >>> listjg5.append(-3)
         >>> listjg5.append(-7)
         >>> listjg5.append(-1)
         >>> print(listjg5)
         [-3, -7, -1]
         >>> listjg5.print_sorted()
-        [-1, -3, -7]
+        [-7, -3, -1]
 
