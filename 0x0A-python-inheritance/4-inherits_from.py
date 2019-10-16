@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 function that returns if the object is an instance of a class that inherited
-from the specified class
+is from the specified class
 """
 
 
