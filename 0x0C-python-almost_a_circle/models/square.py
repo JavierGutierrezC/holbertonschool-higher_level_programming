@@ -33,15 +33,14 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """use of args and kwargs"""
         list_upd = ["id", "size", "x", "y"]
-        count = 0
-        if not args:
-            for key, i, in kwargs.item():
-                setattr(self, key, i)
+        if args:
+            count = 0
+            for i in args:
+                setattr(self, item_list[count], i)
                 count += 1
         else:
-            for c, in args:
-                setattr(self, a[count], c)
-                count += 1
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """returns a dictionary"""
