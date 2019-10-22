@@ -12,7 +12,7 @@ class test_Base(unittest.TestCase):
     """test instance, from base class"""
     def set_up(self):
         """init nb"""
-        Base._Base__objects = 0
+        Base._Base__nb_objects = 0
 
     def test_exit(self):
         """Test if class exists"""
