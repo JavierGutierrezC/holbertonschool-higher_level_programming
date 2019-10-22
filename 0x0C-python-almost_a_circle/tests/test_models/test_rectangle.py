@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Unittest for base.py
+"""Unittest for rectangle.py
 """
 import unittest
 from models.base import Base
@@ -8,7 +8,9 @@ from models.rectangle import Rectangle
 
 class test_rectangle(unittest.TestCase):
     """tests instances, methods from rectangle class"""
+
     def setUp(self):
+        """unit setup"""
         Base._Base__nb_objects = 0
 
     def test_rectangle_inheritance(self):
@@ -104,3 +106,6 @@ class test_rectangle(unittest.TestCase):
         """check if a strong was returned correctly"""
         r1 = Rectangle(10, 20, 28, 30, 5)
         self.assertEqual(str(r1), "[Rectangle] (5) 28/30 - 10/20")
+
+if __name__ == '__main__':
+    unittest.main()
