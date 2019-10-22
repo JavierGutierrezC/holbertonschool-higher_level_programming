@@ -44,9 +44,9 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """temporal dummy creation"""
-        if cls.__name__ is "Rectangle":
+        #if cls.__name__ is "Rectangle":
             dummy = cls(1, 1)
-        elif cls.__name__ is "Square":
+        #elif cls.__name__ is "Square":
             dummy = cls(1)
         dummy.update(**dictionary)
-        return()
+        return(dummy)
