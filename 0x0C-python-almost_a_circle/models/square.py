@@ -36,7 +36,7 @@ class Square(Rectangle):
         if args:
             count = 0
             for i in args:
-                setattr(self, item_list[count], i)
+                setattr(self, list_upd[count], i)
                 count += 1
         else:
             for key, value in kwargs.items():
