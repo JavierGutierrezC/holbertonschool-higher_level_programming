@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Unittest for rectangle.py
+"""Unittest for base.py
 """
 import unittest
 from models.base import Base
@@ -8,7 +8,6 @@ from models.rectangle import Rectangle
 
 class test_rectangle(unittest.TestCase):
     """tests instances, methods from rectangle class"""
-
     def setUp(self):
         """unit setup"""
         Base._Base__nb_objects = 0

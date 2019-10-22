@@ -1,13 +1,15 @@
 #!/usr/bin/python3
-"""Unittest for Base
 """
+Unittest for Base.py
+"""
+
+
 import unittest
-import sys
 from models.base import Base
 
 
 class test_Base(unittest.TestCase):
-    """test for base.py"""
+    """test instance, from base class"""
     def set_up(self):
         """init nb"""
         Base._Base__objects = 0
