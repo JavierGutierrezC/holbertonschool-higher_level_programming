@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""Module square.py"""
+"""
+Module square.py
+"""
+
+
 from models.rectangle import Rectangle
 
 
@@ -13,7 +17,6 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        """returns the sazie of the square"""
         return self.width
 
     @size.setter
