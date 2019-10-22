@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module square.py
+Square.py
 """
 
 
@@ -9,7 +9,6 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """ Class square that inherits from Rectangle"""
-
     def __init__(self, size, x=0, y=0, id=None):
         """Initialization"""
         self.size = size
@@ -17,6 +16,7 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """defines size"""
         return self.width
 
     @size.setter
@@ -31,15 +31,17 @@ class Square(Rectangle):
                .format(self.id, self.x, self.y, self.size))
 
     def update(self, *args, **kwargs):
+        """use of args and kwargs"""
         list_upd = ["id", "size", "x", "y"]
-        if args:
-            count = 0
-            for i in args:
-                setattr(self, list_upd[count], i)
+        count = 0
+        if not args:
+            for key, i, in kwargs.item():
+                setattr(self, key, i)
                 count += 1
         else:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
+            for c, in args:
+                setattr(self, a[count], c)
+                count += 1
 
     def to_dictionary(self):
         """returns a dictionary"""
