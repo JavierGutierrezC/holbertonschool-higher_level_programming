@@ -49,4 +49,4 @@ class Base:
         elif cls.__name__ is "Square":
             dummy = cls(1)
         dummy.update(**dictionary)
-        return(dummy)
+        return()
