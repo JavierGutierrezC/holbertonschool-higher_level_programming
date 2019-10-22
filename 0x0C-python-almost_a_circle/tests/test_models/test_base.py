@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Unittest for max_integer([..])
+"""Unittest for Base
 """
 import unittest
 import sys
@@ -7,7 +7,7 @@ from models.base import Base
 
 
 class test_Base(unittest.TestCase):
-
+    """test for base.py"""
     def set_up(self):
         """init nb"""
         Base._Base__objects = 0
@@ -28,6 +28,7 @@ class test_Base(unittest.TestCase):
         self.assertEqual((b4.id), 12)
 
     def test_Base_zero(self):
+        """test zero number"""
         b1 = Base(0)
         self.assertEqual((b1.id), 0)
 
