@@ -31,12 +31,6 @@ class test_rectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r = Rectangle(10, 10, 10, 10, 10, 10, 10)
 
-    def test_createRectangle2arg(self):
-        """Function to test asign 2 arguments"""
-        Base._Base__nb_objects = 0
-        r1 = Rectangle(39, 39)
-        self.assertEqual(r1.id, 6)
-
     def test_createRectangleallargs(self):
         """Function to test asign 5 arguments all inputs"""
         r1 = Rectangle(39, 39, 39, 39, 39)
