@@ -69,5 +69,28 @@ class test_Base(unittest.TestCase):
         with self.assertRaises(TypeError) as e:
             b1 = Base(12, 23)
 
+    def empty_jason(self):
+        """test for empty list"""
+        lis = Base.to_json_string([])
+        self.assertEqual(lis, "[]")
+
+    def test_empty_json(self):
+        """Empty dict"""
+        dict = Base.to_json_string([{}])
+        self.assertEqual(dict, "[{}]")
+
+    def test_nonefile(self):
+        """test for none file"""
+        Base.save_to_file(None)
+        with open("Base.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+    def test_from_string_set(self):
+        """tests function from json"""
+        with self.assertRaises(TypeError) as e:
+            Base.from_json_string({1, 2})
+        self.assertEqual("the JSON object must be str, not 'set'",
+                         str(e.exception))
+
 if __name__ == '__main__':
     unittest.main()
