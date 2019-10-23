@@ -92,5 +92,34 @@ class test_Base(unittest.TestCase):
         self.assertEqual("the JSON object must be str, not 'set'",
                          str(e.exception))
 
+    def test_json_from_none(self):
+        """test a none in a json string"""
+        ans = Base.to_json_string(None)
+        self.assertEqual(ans, "[]")
+
+    def test_multi_dict_list(self):
+        """test multiple dicts in a json_list"""
+        ans = Base.to_json_string([{"a": 1}, {"b": 2}])
+        self.assertEqual(type(ans), str)
+
+    def test_saves_empty_list_in_file(self):
+        """test to save an empty list to a file"""
+        Base.save_to_file([])
+        with open("Base.json", "r") as f:
+            self.assertEqual(f.read(), "[]")
+
+    def test_json_string_error(self):
+        """Test for from_json_method with int."""
+        with self.assertRaises(TypeError):
+            Base.from_json_string(39)
+
+    def test_json_empty_dict(self):
+        """Test json with empty dict"""
+        list_input = [{}]
+        json_list_input = Base.to_json_string(list_input)
+        listob = Base.from_json_string(json_list_input)
+        self.assertEqual(listob, [{}])
+
+
 if __name__ == '__main__':
     unittest.main()
