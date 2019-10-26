@@ -96,9 +96,26 @@ class test_rectangle(unittest.TestCase):
             self.assertEqual(r1.area(4))
 
     def test_str(self):
-        """check if a strong was returned correctly"""
+        """check if a string was returned correctly"""
         r1 = Rectangle(10, 20, 28, 30, 5)
         self.assertEqual(str(r1), "[Rectangle] (5) 28/30 - 10/20")
+
+    def test_area_3_args(self):
+        """tests area"""
+        r1 = Rectangle(1, 2, 3)
+        self.assertEqual(r1.area(), 2)
+
+    def test_area_4_args(self):
+        """tests area"""
+        r1 = Rectangle(1, 2, 3, 4)
+        self.assertEqual(r1.area(), 2)
+
+    def test_area_1_args(self):
+        """tests area"""
+        with self.assertRaises(ValueError) as e:
+            r1 = Rectangle(0, 2)
+            self.assertEqual(str(e.exception), "width must be > 0")
+
 
 if __name__ == '__main__':
     unittest.main()
