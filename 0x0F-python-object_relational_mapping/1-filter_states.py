@@ -12,7 +12,7 @@ if __name__ == '__main__':
         port=3306)
     cur = javi_db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name REGEXP '^[N]' \
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' \
     ORDER BY id ASC")
     for row in cur.fetchall():
         print(row)
