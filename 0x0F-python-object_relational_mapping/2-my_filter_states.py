@@ -12,7 +12,7 @@ if __name__ == '__main__':
         port=3306)
     cur = javi_db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name= '{:s}' \
+    cur.execute("SELECT * FROM states WHERE BIINARY name= '{:s}' \
     ORDER by id ASC".format(argv[4]))
     for row in cur.fetchall():
         print(row)
