@@ -12,8 +12,7 @@ if __name__ == '__main__':
         port=3306)
     cur = javi_db.cursor()
 
-    cur.execute("SELECT id, name FROM states WHERE name REGEXP '^[N]'")
-    """rows = cur.fetchall()"""
+    cur.execute("SELECT * FROM states ORDER BY id ASC WHERE name REGEXP '^[N]'")
     for row in cur.fetchall():
         print(row)
     javi_db.close()
