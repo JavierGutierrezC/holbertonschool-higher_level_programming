@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     cur.execute("SELECT cities.name FROM states \
     JOIN cities ON cities.state_id = states.id WHERE states.name = %s\
-    ORDER by cities.id",[argv[4]])
+    ORDER by cities.id", [argv[4]])
     new = []
     for row in cur.fetchall():
         new += row
