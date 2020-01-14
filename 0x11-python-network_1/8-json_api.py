@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """
+script that takes in a letter and sends a POST request with letter as parameter
 """
 import requests
 from sys import argv
 
 if __name__ == "__main__":
-    if len(argv) is not 2 or not argv[1].isalpha():
+    if len(argv) is 1 or not argv[1].isalpha():
         # print(len(argv))
         # print(argv[0])
         # print(argv[2])
