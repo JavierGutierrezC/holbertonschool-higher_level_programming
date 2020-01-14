@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-script that takes in a URL, sends a request to the URL and displays the body of the response
+script that takes in a URL, sends a request to the URL and displays response
 """
 import urllib.request
 from urllib.error import HTTPError
