@@ -1,0 +1,1 @@
+README file for he 0x12. Javascript - Warm up proyect
