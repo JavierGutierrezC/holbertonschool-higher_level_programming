@@ -1,0 +1,1 @@
+README file for 0x15. Javascript - Web JQuery tasks
